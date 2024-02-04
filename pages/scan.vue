@@ -165,7 +165,7 @@ export default {
                     this.filename = this.fileInputImage[0].name
                     const formData = new FormData()
                     formData.append('file', this.fileInputImage[0]);
-                    const response = await axios.post(`${HOST}/parse`, formData, {
+                    const response = await axios.post(`${this.HOST}/parse`, formData, {
                         headers: formData.getHeaders ? formData.getHeaders() : { 'Content-Type': 'multipart/form-data' }
                     })
                     this.result = response.data
