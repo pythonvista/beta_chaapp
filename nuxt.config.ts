@@ -40,7 +40,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
       public: {
-        secret: process.env.HOST,
+        HOST: process.env.HOST,
       }
   
   },
