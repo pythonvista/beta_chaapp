@@ -34,8 +34,10 @@
         </div>
         <div v-else>
             <div class="q-pa-md">
-                <q-table title="Treats" :rows="FormatTable.row" :columns="FormatTable.col" row-key="name" />
+                <q-table title="Table Info" :rows="FormatTable.row" :columns="FormatTable.col" row-key="name" />
             </div>
+            <p class="my-4 text-lg underline">Graph</p>
+            <img :src="`${HOST}/images/${result.img}`" />
         </div>
     </div>
 
@@ -56,6 +58,7 @@ export default {
         img: "",
         fileInputImage: null,
         filename: '',
+        HOST: '',
         loading: false,
         result: false,
         columns: [
@@ -208,6 +211,10 @@ export default {
                 reader.readAsDataURL(file);
             });
         }
+    },
+    mounted(){
+         const config = useRuntimeConfig()
+         this.HOST = config.HOST
     }
 }
 </script>
