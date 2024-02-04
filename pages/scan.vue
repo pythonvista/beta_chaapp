@@ -156,12 +156,13 @@ export default {
         async uploadImage() {
             try {
                 if (this.fileInputImage) {
+                     const config = useRuntimeConfig()
                     this.loading = true
                     console.log(this.fileInputImage[0])
                     this.filename = this.fileInputImage[0].name
                     const formData = new FormData()
                     formData.append('file', this.fileInputImage[0]);
-                    const response = await axios.post(`http://localhost:8000/parse`, formData, {
+                    const response = await axios.post(`${config.HOST}parse`, formData, {
                         headers: formData.getHeaders ? formData.getHeaders() : { 'Content-Type': 'multipart/form-data' }
                     })
                     this.result = response.data

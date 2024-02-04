@@ -39,7 +39,10 @@ export default defineNuxtConfig({
   
 
   runtimeConfig: {
-    FIREBASE_API_KEY: process.env.FIREBASE_API_KEY,
+      public: {
+        secret: process.env.HOST,
+      }
+  
   },
   modules: [
     '@pinia/nuxt',
