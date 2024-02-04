@@ -32,12 +32,12 @@
                 </div>
             </div>
         </div>
-        <div v-else>
+        <div class="px-2 py-4" v-else>
             <div class="q-pa-md">
                 <q-table title="Table Info" :rows="FormatTable.row" :columns="FormatTable.col" row-key="name" />
             </div>
             <p class="my-4 text-lg underline">Graph</p>
-            <img v-if="result.img" :src="`${HOST}/images/${result.img}`" />
+            <img v-if="result.img" :src="`${HOST}images/${result.img}`" />
         </div>
     </div>
 
