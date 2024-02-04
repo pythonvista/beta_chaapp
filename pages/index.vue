@@ -17,8 +17,8 @@
                     </h1>
                     <p class="mt-5 text-base text-white sm:text-xl">Visual Interface to plot the graph.</p>
 
-                    <a href="#" title=""
-                        class="inline-flex mr-2  items-center px-6 py-4 mt-8 font-semibold text-white transition-all duration-200 bg-blue-600 rounded-lg sm:mt-16 hover:bg-blue-700 focus:bg-blue-700"
+                    <a @click="$router.push({path: '/scan'})" title=""
+                        class="inline-flex mr-2  items-center px-6 cursor-pointer py-4 mt-8 font-semibold text-white transition-all duration-200 bg-blue-600 rounded-lg sm:mt-16 hover:bg-blue-700 focus:bg-blue-700"
                         role="button">
                         Get Started
                         <svg class="w-6 h-6 ml-8 -mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -28,7 +28,7 @@
                         </svg>
                     </a>
 
-     <a href="#" title=""
+     <a href="https://cooperative-bull-cummerbund.cyclic.app/docs" title=""
                             class="inline-flex items-center px-6 py-4 mt-8 font-semibold text-white transition-all duration-200 bg-blue-600 rounded-lg sm:mt-16 hover:bg-blue-700 focus:bg-blue-700"
                             role="button">
                             Docs
