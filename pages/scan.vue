@@ -37,7 +37,7 @@
                 <q-table title="Table Info" :rows="FormatTable.row" :columns="FormatTable.col" row-key="name" />
             </div>
             <p class="my-4 text-lg underline">Graph</p>
-            <img :src="`${HOST}/images/${result.img}`" />
+            <img v-if="result.img" :src="`${HOST}/images/${result.img}`" />
         </div>
     </div>
 
