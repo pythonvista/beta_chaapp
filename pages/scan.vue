@@ -165,7 +165,7 @@ export default {
                     this.filename = this.fileInputImage[0].name
                     const formData = new FormData()
                     formData.append('file', this.fileInputImage[0]);
-                    const response = await axios.post(`${config.HOST}parse`, formData, {
+                    const response = await axios.post(`${HOST}/parse`, formData, {
                         headers: formData.getHeaders ? formData.getHeaders() : { 'Content-Type': 'multipart/form-data' }
                     })
                     this.result = response.data
@@ -214,7 +214,7 @@ export default {
     },
     mounted(){
          const config = useRuntimeConfig()
-         this.HOST = config.HOST
+         this.HOST = config.HOST ? config.HOST : 'https://cooperative-bull-cummerbund.cyclic.app'
     }
 }
 </script>
